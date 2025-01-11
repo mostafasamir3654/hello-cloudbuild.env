@@ -45,7 +45,7 @@ steps:
   args:
   - clone
   - --recurse-submodules
-  - git@github.com:${GITHUB-USERNAME}/hello-cloudbuild-env.git
+  - git@github.com:mostafasamir3654/hello-cloudbuild-env.git
   volumes:
   - name: ssh
     path: /root/.ssh
@@ -78,7 +78,7 @@ steps:
 
 availableSecrets:
   secretManager:
-  - versionName: projects/mostafasamir3654/secrets/ssh_key_secret/versions/1
+  - versionName: projects/${PROJECT_NUMBER}/secrets/ssh_key_secret/versions/1
     env: 'SSH_KEY'
 
 # [END cloudbuild-delivery]
